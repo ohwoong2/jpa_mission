@@ -38,7 +38,7 @@ public void test1() {
 
 	em.close();
 
-	}
+}
 ```
 
 ### ⁉️ 문제 2. 아래 JPQL 문장의 ? 에 알맞은 코드를 넣어라!
