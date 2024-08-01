@@ -41,7 +41,7 @@ public void test1() {
 }
 ```
 
-
+<br>
 
 ### ⁉️ 문제 2. 아래 JPQL 문장의 ? 에 알맞은 코드를 넣어라!
 ```java
@@ -56,7 +56,7 @@ EntityManager em = DBUtil.getEntityManager();
 	}
 ```
 
-
+<br>
 
 ### ⁉️ 문제 3. 전략적으로 어떤 로딩 방식을 선택하면 좋을지 이유와 함께 설명해주세요! 
 #### (다른 환경은 모두 동일하다고 가정)
