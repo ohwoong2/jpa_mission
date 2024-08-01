@@ -22,12 +22,52 @@
  - JPQL 역량 강화
 
 <br>
+---
+### ⁉️ 문제 1. 아래와 같이 실행 후 에러가 발생했다. 에러에 대해 분석하고, 해결책을 제시하라!
+javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: Null value was assigned to a property 
 
-### ⁉️ 문제 1.
+@Test
+public void test1() {
+EntityManager em = DBUtil.getEntityManager();
 
-### ⁉️ 문제 1.
+Emp e = em.find(Emp.class, 7839);
+System.out.println(e);
 
-### ⁉️ 문제 1.
+em.close();
+
+}
+	
+
+### ⁉️ 문제 2. 아래 JPQL 문장의 ? 에 알맞은 코드를 넣어라!
+@Test
+public void test2() {
+EntityManager em = DBUtil.getEntityManager();
+
+  List<Emp> datas1 = em
+				.createQuery("select e from Emp e join ? d where ?.ename = :ename and ?.deptno = :deptno", Emp.class)
+				.setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
+		datas1.forEach(System.out::println);
+		em.close();
+	}
+
+
+### ⁉️ 문제 3. 다른 환경은 모두 동일한 상황에서 CPU 및 메모리 성능이 고성능인 경우와 저성능인 경우 전략적으로 어떤 로딩 방식을 선택하면 좋을지 이유와 함께 설명해주세요!
+
+(Member.java)
+		.....
+		 @ManyToOne
+		@ManyToOne(fetch = FetchType.LAZY)
+		@JoinColumn(name="team_id")  //Team3의 pk 변수에 선언된 매핑된 컬럼명 -> fk 설정 명령어
+		private Team4 teamId;
+		(실행코드)
+		System.out.println(m.getTeamId().getTeamName());//?
+		최고사양
+		CPU (코어 수 : 56 / 스래드 수 : 112 / 기본 클럭속도 : 2.0GHz)
+		메모리 (용량 : 8TB / 클럭속도 : 6400 MHz)
+		최저사양
+		CPU (코어 수 : 2 / 스래드 수 : 2 / 기본 클럭속도 : 1.35GHz)
+		메모리 (용량 : 2GB / 클럭속도 : 1066 MHz)
+
 ---
 
 
