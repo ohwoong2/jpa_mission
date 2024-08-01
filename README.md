@@ -21,7 +21,36 @@
  - JPA JOIN 문법 관련 문제 출제를 통한 복습
  - JPQL 역량 강화
 
+---
+
+# Entity
+
+## Emp Table
+
+|Field      |Type        |Null|Key|Default|Extra|  
+|-----------|------------|----|---|-------|-----|
+|EMPNO |int         |NO  |PRIMARY KEY   |       |     |
+|COMM   |int         |YES |   |       |     |
+|ENAME     |String         |YES |   |       |     |
+|JOB       |String |YES |   |       |     |
+|HIERDATE     |String |YES |   |       |     |
+|SAL        |int      |YES |   |       |     |
+|MGR      |int         |YES |   |       |     |
+|DEPTNO      |int         |YES |FOREIGN KEY   |       |     |
+
 <br>
+
+## Dept Table
+
+|Field      |Type        |Null|Key|Default|Extra|  
+|-----------|------------|----|---|-------|-----|
+|DEPTNO |int         |NO  |PRIMARY KEY   |       |     |
+|DNAME   |String         |YES |   |       |     |
+|LOC     |String         |YES |   |       |     |
+
+
+<br>
+
 
 
 ### ⁉️ 문제 1. 아래와 같이 실행 후 에러가 발생했다. 에러에 대해 분석하고, 해결책을 제시하라!
@@ -45,23 +74,16 @@ public void test1() {
 <br>
 
 ### ⁉️ 문제 2. 아래 JPQL 문장의 ? 에 알맞은 코드를 넣어라!
-```java
-@Test
-public void test2() {
-EntityManager em = DBUtil.getEntityManager();
-
-  List<Emp> datas1 = em .createQuery("select e from Emp e join ? d where ?.ename = :ename and ?.deptno = :deptno", Emp.class)
-			.setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
-		datas1.forEach(System.out::println);
-		em.close();
-	}
-```
 
 <br>
+
+<p align="left"><img src="https://github.com/user-attachments/assets/575d8a7d-a9ed-4d08-894b-3052b4a7442e"></p><br><br>
+
 <br>
 
 ### ⁉️ 문제 3. 전략적으로 어떤 로딩 방식을 선택하면 좋을지 이유와 함께 설명해주세요! 
-#### (다른 환경은 모두 동일하다고 가정)
+#### ${\textsf{\color{red}(다른 환경은 모두 동일하다고 가정)}}$
+
 
 ```java
 (Member.java)
