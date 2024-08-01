@@ -31,14 +31,14 @@ ERROR!
 
 @Test
 public void test1() {
-EntityManager em = DBUtil.getEntityManager();
+	EntityManager em = DBUtil.getEntityManager();
 
-Emp e = em.find(Emp.class, 7839);
-System.out.println(e);
+	Emp e = em.find(Emp.class, 7839);
+	System.out.println(e);
 
-em.close();
+	em.close();
 
-}
+	}
 ```
 
 ### ⁉️ 문제 2. 아래 JPQL 문장의 ? 에 알맞은 코드를 넣어라!
@@ -47,9 +47,8 @@ em.close();
 public void test2() {
 EntityManager em = DBUtil.getEntityManager();
 
-  List<Emp> datas1 = em
-				.createQuery("select e from Emp e join ? d where ?.ename = :ename and ?.deptno = :deptno", Emp.class)
-				.setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
+  List<Emp> datas1 = em .createQuery("select e from Emp e join ? d where ?.ename = :ename and ?.deptno = :deptno", Emp.class)
+			.setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
 		datas1.forEach(System.out::println);
 		em.close();
 	}
