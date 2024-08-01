@@ -26,7 +26,8 @@
 
 ### ⁉️ 문제 1. 아래와 같이 실행 후 에러가 발생했다. 에러에 대해 분석하고, 해결책을 제시하라!
 ```java
-javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: Null value was assigned to a property 
+ERROR!
+-> javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: Null value was assigned to a property 
 
 @Test
 public void test1() {
