@@ -69,9 +69,14 @@ public void test1() {
 
 }
 ```
+<details>
+<summary> <h3 style="font-size: 10px;">ELK 파이프 라인🗄️과 MySQL🐬 환경 구축</summary>
+<br>
+	dddddddddddddddddddddd
+</details>
+<br>
+<br>
 
-<br>
-<br>
 
 ### ⁉️ 문제 2. 아래 JPQL 문장의 물음표(?)에 알맞은 코드를 넣어라!
 
