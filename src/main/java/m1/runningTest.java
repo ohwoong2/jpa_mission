@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import util.DBUtil;
 
-public class runningTest1 {
+public class runningTest {
 	
 	//javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: Null value was assigned to a property 
 	// 미션 1) 위의 에러 발생 -> 해결책 제시
