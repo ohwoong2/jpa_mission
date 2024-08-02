@@ -1,6 +1,7 @@
-# JPA 문법 이해를 위한 미션 문제 제작
+# JPA 문법 이해를 위해 스스로 문제 만들고 생각해보기
 
-<h2 style="font-size: 25px;"> 개발팀원👨‍👨‍👧‍👦💻<br>
+<h2 style="font-size: 25px;"> 스터디팀원👨‍👨‍👧‍👦✏
+	
 <br>
 
 |<img src="https://avatars.githubusercontent.com/u/175369539?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/98442485?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/79312705?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/175371231?v=4" width="150" height="150"/>|
