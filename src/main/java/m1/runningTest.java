@@ -27,6 +27,11 @@ public class runningTest {
 	public void test2() {
 		EntityManager em = DBUtil.getEntityManager();
 
+		/*
+			select ename, e.deptno, dname
+			from emp e inner join dept d
+			on ename = 'SMITH' and d.deptno = 20;
+		 */
 		// 미션 2) 아래 JPQL 문장의 ? 를 추가해주세요
 		List<Emp> datas1 = em
 				.createQuery("select e from Emp e join ? d where ?.ename = :ename and ?.deptno = :deptno", Emp.class)
