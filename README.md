@@ -118,7 +118,8 @@ on ename = 'SMITH' and d.deptno = 20;
 <p> Emp 객체의 deptno를 통해 Dept객체를 접근</p>
 
 ```java 
-List<Emp> datas1 = em.createQuery("select e from Emp e join e.deptno d where e.ename = :ename and d.deptno = :deptno", Emp.class).setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
+List<Emp> datas1 = em.createQuery("select e from Emp e join e.deptno d where e.ename = :ename and d.deptno = :deptno", Emp.class)
+			.setParameter("ename", "SMITH").setParameter("deptno", 20).getResultList();
 datas1.forEach(System.out::println);
 ``` 
 </details>
@@ -151,7 +152,14 @@ datas1.forEach(System.out::println);
 <summary> <h3 style="font-size: 10px;">🔥 문제 3. 답안</summary>
 <br>
 
-<p> "src/main/java/m1/Emp.java" 파일에 정의한 Emp class 수정</p>
+<p>컴퓨터 사양에 따라 이 두 가지 로딩 전략을 적절히 선택하는 것이 중요</p>
+<p>@ManyToOne -> 즉시 로딩: 데이터가 항상 필요하고 메모리와 CPU 자원이 충분한 경우 사용하면 도움이 될 수 있음</p>
+<p>@ManyToOne(fetch = FetchType.LAZY) -> 지연 로딩: 데이터가 조건부로 필요하고 메모리와 CPU 자원이 제한적인 경우 사용하면 도움이 될 수 있음</p>
+
+<p>결론) </p>
+<p>즉시 로딩은 많은 데이터를 한 번에 메모리에 로드하므로 고성능 CPU와 대용량 메모리를 가진 시스템에서 유리</p>
+<p>반면, 저성능 시스템에서는 메모리 부족이나 CPU 과부하 문제가 발생할 수 있음으로 지연 로딩 사용하는 것이 유리</p>
+
 
 </details>
 
