@@ -133,8 +133,8 @@ datas1.forEach(System.out::println);
 ```java
 (Member.java)
 		.....
-		@ManyToOne
-		@ManyToOne(fetch = FetchType.LAZY)
+		@ManyToOne // 1번
+		@ManyToOne(fetch = FetchType.LAZY) // 2번
 		@JoinColumn(name="team_id") 
 		
 		System.out.println(m.getTeamId().getTeamName());
@@ -147,6 +147,16 @@ datas1.forEach(System.out::println);
 		CPU (코어 수 : 2 / 스래드 수 : 2 / 기본 클럭속도 : 1.35GHz)
 		메모리 (용량 : 2GB / 클럭속도 : 1066 MHz)
 
+<details>
+<summary> <h3 style="font-size: 10px;">🔥 문제 3. 답안</summary>
+<br>
+
+<p> "src/main/java/m1/Emp.java" 파일에 정의한 Emp class 수정</p>
+
+</details>
+
+
+
 ---
 
 ## 회 고 📝
@@ -156,7 +166,7 @@ datas1.forEach(System.out::println);
 <br>
 
 ### [이연희](https://github.com/LeeYeonhee-00)
-> logstash config파일에서 filter를 사용하여 데이터 전처리 하는 법을 연습할 수 있어서 좋았다. 또한, mysql + ELK pipeline 환경 구축을 하며 연결되어 값이 들어오는 것을 확인하고 kibana로 시각화해보는 과정이 재미있었다. 
+> JPA를 학습하며 헷갈렸던 JPQL문법에 대해 더 심도있게 이해할 수 있는 기회였다. 또한, 실제 데이터베이스와 연결해서 데이터를 주고받는 과정에서 확인해야할 사항들이 많다는 것을 느꼈다. 
 
 <br>
 
