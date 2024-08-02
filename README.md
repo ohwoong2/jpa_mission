@@ -70,10 +70,32 @@ public void test1() {
 }
 ```
 <details>
-<summary> <h3 style="font-size: 10px;">ELK 파이프 라인🗄️과 MySQL🐬 환경 구축</summary>
+<summary> <h3 style="font-size: 10px;">🔥 문제 1. 답안</summary>
 <br>
-	dddddddddddddddddddddd
+
+<p> "src/main/java/m1/Emp.java" 파일에 정의한 Emp class 수정</p>
+
+```java
+...
+private int comm;
+...
+private int mgr;
+...
+```
+<p> 실제 저장된 데이터를 보면 comm과 mgr에 null값인 데이터가 존재하기 때문에 에러 발생</p>
+<p> -> 위의 항목을 Integer 객체로 수정</p>
+
+<p>최종 답안)</p>
+
+```java
+...
+private Integer comm;
+...
+private Integer mgr;
+...
+```
 </details>
+	
 <br>
 <br>
 
@@ -84,7 +106,35 @@ public void test1() {
 
 <p align="left"><img src="https://github.com/user-attachments/assets/575d8a7d-a9ed-4d08-894b-3052b4a7442e"></p><br><br>
 
+<details>
+<summary> <h3 style="font-size: 10px;">🔥 문제 2. 답안</summary>
 <br>
+
+<p> "src/main/java/m1/Emp.java" 파일에 정의한 Emp class 수정</p>
+
+```java
+...
+private int comm;
+...
+private int mgr;
+...
+```
+<p> 실제 저장된 데이터를 보면 comm과 mgr에 null값인 데이터가 존재하기 때문에 에러 발생</p>
+<p> -> 위의 항목을 Integer 객체로 수정</p>
+
+<p>최종 답안)</p>
+
+```java
+...
+private Integer comm;
+...
+private Integer mgr;
+...
+```
+</details>
+
+<br>
+
 
 ### ⁉️ 문제 3. 전략적으로 어떤 로딩 방식을 선택하면 좋을지 이유와 함께 설명해주세요! 
 #### ${\textsf{\color{red}(다른 환경은 모두 동일하다고 가정)}}$
